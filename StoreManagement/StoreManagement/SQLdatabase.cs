@@ -6,6 +6,7 @@ using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace StoreManagement
@@ -15,13 +16,28 @@ namespace StoreManagement
         //Singleton Pattern
         private SQLdatabase() { }
         private static SQLdatabase SQL;
+        private static readonly object Instancelock = new object();
+        private static SQLdatabase instance = null;
+
         public static SQLdatabase getInstanceSQL()
         {
-            if (SQL == null)
+            if (instance == null)
+            {
+                lock (Instancelock)
+                {
+                    if (instance == null)
+                    {
+                        Interlocked.CompareExchange(ref instance, new SQLdatabase(), null);
+                    }
+                }
+            }
+            return instance;
+            /*
+                if (SQL == null)
             {
                 SQL = new SQLdatabase();
             }
-            return SQL;
+            return SQL;*/
         }
         //
         public override DbCommand CreateCommand()
@@ -46,6 +62,7 @@ namespace StoreManagement
         public override DbConnection CreateConnection()
         {
             string strconn = ConfigurationManager.ConnectionStrings["SQL"].ConnectionString;
+            
             return new SqlConnection(strconn);
         }
 

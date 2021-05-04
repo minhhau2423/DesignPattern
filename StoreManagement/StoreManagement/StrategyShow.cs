@@ -118,9 +118,6 @@ namespace StoreManagement
         void picClick(object sender, EventArgs e)
         {
             var pic = (Label)sender;
-            pic.BackColor = Color.Blue;
-          
-            
         }
 
        

@@ -18,11 +18,15 @@ namespace StoreManagement
         {
             InitializeComponent();
         }
+        public Home(UserControl screen)
+        {
+            InitializeComponent();
+        }
       
         private void Home_Load(object sender, EventArgs e)
         {
+           
             homeControl1.BringToFront();
-            btnGH.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -38,13 +42,16 @@ namespace StoreManagement
         {
             selectPanel.Top = btnTk.Top;
             statisticalControl1.BringToFront();
-           
+          
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             selectPanel.Top = btnKho.Top;
             warehouseControl1.BringToFront();
+            
         }
 
         private void btnNv_Click_1(object sender, EventArgs e)
@@ -52,21 +59,23 @@ namespace StoreManagement
             selectPanel.Top = btnNv.Top;
             staffControl2.BringToFront();
             staffControl2.show();
-            //staffControl1.HienThiNV();
             
+            //staffControl1.HienThiNV();
+
         }
 
         private void btnHome_Click_1(object sender, EventArgs e)
         {
             selectPanel.Top = btnHome.Top;
             homeControl1.BringToFront();
-          
+           
         }
 
         private void btnKh_Click(object sender, EventArgs e)
         {
             selectPanel.Top = btnKh.Top;
             customerControl1.BringToFront();
+          
             
         }
 
@@ -74,6 +83,7 @@ namespace StoreManagement
         {
             selectPanel.Top = btnSp.Top;
             productControl1.BringToFront();
+           
         }
 
         private void btnHd_Click(object sender, EventArgs e)
@@ -81,7 +91,7 @@ namespace StoreManagement
             selectPanel.Top = btnHd.Top;
             ordersControl2.BringToFront();
             ordersControl2.show();
-            btnGH.Show();
+          
             
 
             // ordersControl1.HienThiSP();
@@ -106,6 +116,18 @@ namespace StoreManagement
         private void btnGH_Click(object sender, EventArgs e)
         {
 
+        }
+       public void ReLoad()
+        {
+            this.Close();
+            Home h = new Home();
+            h.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            ReLoad();
         }
     }
 }

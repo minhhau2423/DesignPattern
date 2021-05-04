@@ -19,6 +19,7 @@ namespace StoreManagement
             Add_Khach_hang();
             Add_HoaDon();
             Add_ChiTietHoaDon();
+            MessageBox.Show("Save sucessful.");
 
         } 
         public abstract void Add_Khach_hang();
@@ -48,6 +49,7 @@ namespace StoreManagement
             command.Parameters.AddWithValue("SdtKH", str[2]);
             command.Parameters.AddWithValue("DiaChiKH", str[3]);
             command.ExecuteNonQuery();
+            conn.Close();
         }
         public override void Add_HoaDon()
         {
@@ -61,7 +63,7 @@ namespace StoreManagement
             command.Parameters.AddWithValue("NgayLap", DateTime.Parse(str[6]));
             command.Parameters.AddWithValue("TongTien", str[7]);
             command.ExecuteNonQuery();
-
+            conn.Close();
 
         }
         public override void Add_ChiTietHoaDon()
@@ -123,8 +125,8 @@ namespace StoreManagement
                 command2.ExecuteNonQuery();
 
 
-
             }
+            conn.Close();
         }
     }
 }

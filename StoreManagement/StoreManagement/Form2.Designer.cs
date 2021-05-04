@@ -32,6 +32,7 @@ namespace StoreManagement
             System.Windows.Forms.Button button7;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             System.Windows.Forms.Button button8;
+            System.Windows.Forms.Button button1;
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKho = new System.Windows.Forms.Button();
             this.btnTk = new System.Windows.Forms.Button();
@@ -47,8 +48,6 @@ namespace StoreManagement
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnGH = new System.Windows.Forms.Button();
             this.warehouseControl1 = new StoreManagement.WarehouseControl();
             this.statisticalControl1 = new StoreManagement.StatisticalControl();
             this.staffControl2 = new StoreManagement.StaffControl();
@@ -56,10 +55,12 @@ namespace StoreManagement
             this.ordersControl2 = new StoreManagement.OrdersControl();
             this.homeControl1 = new StoreManagement.HomeControl();
             this.customerControl1 = new StoreManagement.customerControl();
+            this.label3 = new System.Windows.Forms.Label();
             this.staffControl1 = new StoreManagement.StaffControl();
             this.ordersControl1 = new StoreManagement.OrdersControl();
             button7 = new System.Windows.Forms.Button();
             button8 = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,10 +75,9 @@ namespace StoreManagement
             button7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button7.ForeColor = System.Drawing.Color.White;
             button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            button7.Location = new System.Drawing.Point(1175, 20);
-            button7.Margin = new System.Windows.Forms.Padding(4);
+            button7.Location = new System.Drawing.Point(881, 16);
             button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(39, 32);
+            button7.Size = new System.Drawing.Size(29, 26);
             button7.TabIndex = 10;
             button7.UseVisualStyleBackColor = true;
             button7.Click += new System.EventHandler(this.button7_Click);
@@ -90,12 +90,26 @@ namespace StoreManagement
             button8.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             button8.ForeColor = System.Drawing.Color.White;
             button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            button8.Location = new System.Drawing.Point(16, 603);
-            button8.Margin = new System.Windows.Forms.Padding(4);
+            button8.Location = new System.Drawing.Point(12, 490);
             button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(39, 32);
+            button8.Size = new System.Drawing.Size(29, 26);
             button8.TabIndex = 11;
             button8.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            button1.ForeColor = System.Drawing.Color.White;
+            button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            button1.Location = new System.Drawing.Point(852, 18);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(22, 22);
+            button1.TabIndex = 13;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -111,9 +125,8 @@ namespace StoreManagement
             this.panel1.Controls.Add(button8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 650);
+            this.panel1.Size = new System.Drawing.Size(149, 528);
             this.panel1.TabIndex = 0;
             // 
             // btnKho
@@ -125,10 +138,9 @@ namespace StoreManagement
             this.btnKho.ForeColor = System.Drawing.Color.White;
             this.btnKho.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.Image")));
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKho.Location = new System.Drawing.Point(16, 345);
-            this.btnKho.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKho.Location = new System.Drawing.Point(12, 280);
             this.btnKho.Name = "btnKho";
-            this.btnKho.Size = new System.Drawing.Size(183, 50);
+            this.btnKho.Size = new System.Drawing.Size(137, 41);
             this.btnKho.TabIndex = 16;
             this.btnKho.Text = "Bills";
             this.btnKho.UseVisualStyleBackColor = true;
@@ -143,10 +155,9 @@ namespace StoreManagement
             this.btnTk.ForeColor = System.Drawing.Color.White;
             this.btnTk.Image = ((System.Drawing.Image)(resources.GetObject("btnTk.Image")));
             this.btnTk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTk.Location = new System.Drawing.Point(16, 402);
-            this.btnTk.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTk.Location = new System.Drawing.Point(12, 327);
             this.btnTk.Name = "btnTk";
-            this.btnTk.Size = new System.Drawing.Size(183, 50);
+            this.btnTk.Size = new System.Drawing.Size(137, 41);
             this.btnTk.TabIndex = 13;
             this.btnTk.Text = "Statistical";
             this.btnTk.UseVisualStyleBackColor = true;
@@ -161,10 +172,9 @@ namespace StoreManagement
             this.btnHd.ForeColor = System.Drawing.Color.White;
             this.btnHd.Image = ((System.Drawing.Image)(resources.GetObject("btnHd.Image")));
             this.btnHd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHd.Location = new System.Drawing.Point(16, 287);
-            this.btnHd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHd.Location = new System.Drawing.Point(12, 233);
             this.btnHd.Name = "btnHd";
-            this.btnHd.Size = new System.Drawing.Size(183, 50);
+            this.btnHd.Size = new System.Drawing.Size(137, 41);
             this.btnHd.TabIndex = 15;
             this.btnHd.Text = "Orders";
             this.btnHd.UseVisualStyleBackColor = true;
@@ -179,10 +189,9 @@ namespace StoreManagement
             this.btnSp.ForeColor = System.Drawing.Color.White;
             this.btnSp.Image = ((System.Drawing.Image)(resources.GetObject("btnSp.Image")));
             this.btnSp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSp.Location = new System.Drawing.Point(16, 229);
-            this.btnSp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSp.Location = new System.Drawing.Point(12, 186);
             this.btnSp.Name = "btnSp";
-            this.btnSp.Size = new System.Drawing.Size(183, 50);
+            this.btnSp.Size = new System.Drawing.Size(137, 41);
             this.btnSp.TabIndex = 14;
             this.btnSp.Text = "Product";
             this.btnSp.UseVisualStyleBackColor = true;
@@ -197,10 +206,9 @@ namespace StoreManagement
             this.btnKh.ForeColor = System.Drawing.Color.White;
             this.btnKh.Image = ((System.Drawing.Image)(resources.GetObject("btnKh.Image")));
             this.btnKh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKh.Location = new System.Drawing.Point(16, 171);
-            this.btnKh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKh.Location = new System.Drawing.Point(12, 139);
             this.btnKh.Name = "btnKh";
-            this.btnKh.Size = new System.Drawing.Size(183, 50);
+            this.btnKh.Size = new System.Drawing.Size(137, 41);
             this.btnKh.TabIndex = 13;
             this.btnKh.Text = "Customer";
             this.btnKh.UseVisualStyleBackColor = true;
@@ -215,10 +223,9 @@ namespace StoreManagement
             this.btnNv.ForeColor = System.Drawing.Color.White;
             this.btnNv.Image = ((System.Drawing.Image)(resources.GetObject("btnNv.Image")));
             this.btnNv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNv.Location = new System.Drawing.Point(16, 113);
-            this.btnNv.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNv.Location = new System.Drawing.Point(12, 92);
             this.btnNv.Name = "btnNv";
-            this.btnNv.Size = new System.Drawing.Size(183, 50);
+            this.btnNv.Size = new System.Drawing.Size(137, 41);
             this.btnNv.TabIndex = 12;
             this.btnNv.Text = "Staff";
             this.btnNv.UseVisualStyleBackColor = true;
@@ -233,10 +240,9 @@ namespace StoreManagement
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(16, 55);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(12, 45);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(183, 50);
+            this.btnHome.Size = new System.Drawing.Size(137, 41);
             this.btnHome.TabIndex = 11;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -245,20 +251,18 @@ namespace StoreManagement
             // selectPanel
             // 
             this.selectPanel.BackColor = System.Drawing.Color.DodgerBlue;
-            this.selectPanel.Location = new System.Drawing.Point(4, 55);
-            this.selectPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.selectPanel.Location = new System.Drawing.Point(3, 45);
             this.selectPanel.Name = "selectPanel";
-            this.selectPanel.Size = new System.Drawing.Size(191, 53);
+            this.selectPanel.Size = new System.Drawing.Size(143, 43);
             this.selectPanel.TabIndex = 11;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(199, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(149, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1018, 17);
+            this.panel2.Size = new System.Drawing.Size(764, 14);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -266,10 +270,9 @@ namespace StoreManagement
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(228, 11);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(171, 9);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(137, 94);
+            this.panel3.Size = new System.Drawing.Size(103, 76);
             this.panel3.TabIndex = 2;
             // 
             // label1
@@ -277,10 +280,9 @@ namespace StoreManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(0, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 24);
+            this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Grocery Store";
             // 
@@ -288,10 +290,9 @@ namespace StoreManagement
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 53);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -300,10 +301,9 @@ namespace StoreManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(373, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(280, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(410, 41);
+            this.label2.Size = new System.Drawing.Size(328, 33);
             this.label2.TabIndex = 11;
             this.label2.Text = "Grocery Store Management";
             // 
@@ -317,46 +317,18 @@ namespace StoreManagement
             this.panel4.Controls.Add(this.homeControl1);
             this.panel4.Controls.Add(this.customerControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(199, 111);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(149, 90);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1018, 539);
+            this.panel4.Size = new System.Drawing.Size(764, 438);
             this.panel4.TabIndex = 12;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(376, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "version 1.0";
-            // 
-            // btnGH
-            // 
-            this.btnGH.BackColor = System.Drawing.Color.White;
-            this.btnGH.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGH.BackgroundImage")));
-            this.btnGH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnGH.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGH.Location = new System.Drawing.Point(644, 62);
-            this.btnGH.Name = "btnGH";
-            this.btnGH.Size = new System.Drawing.Size(28, 23);
-            this.btnGH.TabIndex = 13;
-            this.btnGH.UseVisualStyleBackColor = false;
-            this.btnGH.Click += new System.EventHandler(this.btnGH_Click);
             // 
             // warehouseControl1
             // 
             this.warehouseControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.warehouseControl1.Location = new System.Drawing.Point(0, 0);
-            this.warehouseControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.warehouseControl1.Name = "warehouseControl1";
-            this.warehouseControl1.Size = new System.Drawing.Size(1018, 539);
+            this.warehouseControl1.Size = new System.Drawing.Size(764, 438);
             this.warehouseControl1.TabIndex = 6;
             // 
             // statisticalControl1
@@ -364,9 +336,8 @@ namespace StoreManagement
             this.statisticalControl1.BackColor = System.Drawing.Color.White;
             this.statisticalControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statisticalControl1.Location = new System.Drawing.Point(0, 0);
-            this.statisticalControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.statisticalControl1.Name = "statisticalControl1";
-            this.statisticalControl1.Size = new System.Drawing.Size(1018, 539);
+            this.statisticalControl1.Size = new System.Drawing.Size(764, 438);
             this.statisticalControl1.TabIndex = 5;
             // 
             // staffControl2
@@ -374,9 +345,8 @@ namespace StoreManagement
             this.staffControl2.BackColor = System.Drawing.Color.White;
             this.staffControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffControl2.Location = new System.Drawing.Point(0, 0);
-            this.staffControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.staffControl2.Name = "staffControl2";
-            this.staffControl2.Size = new System.Drawing.Size(1018, 539);
+            this.staffControl2.Size = new System.Drawing.Size(764, 438);
             this.staffControl2.TabIndex = 4;
             // 
             // productControl1
@@ -384,9 +354,8 @@ namespace StoreManagement
             this.productControl1.BackColor = System.Drawing.Color.White;
             this.productControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productControl1.Location = new System.Drawing.Point(0, 0);
-            this.productControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productControl1.Name = "productControl1";
-            this.productControl1.Size = new System.Drawing.Size(1018, 539);
+            this.productControl1.Size = new System.Drawing.Size(764, 438);
             this.productControl1.TabIndex = 3;
             // 
             // ordersControl2
@@ -394,9 +363,8 @@ namespace StoreManagement
             this.ordersControl2.BackColor = System.Drawing.Color.White;
             this.ordersControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ordersControl2.Location = new System.Drawing.Point(0, 0);
-            this.ordersControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ordersControl2.Name = "ordersControl2";
-            this.ordersControl2.Size = new System.Drawing.Size(1018, 539);
+            this.ordersControl2.Size = new System.Drawing.Size(764, 438);
             this.ordersControl2.TabIndex = 2;
             // 
             // homeControl1
@@ -404,25 +372,34 @@ namespace StoreManagement
             this.homeControl1.BackColor = System.Drawing.Color.White;
             this.homeControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.homeControl1.Location = new System.Drawing.Point(0, 0);
-            this.homeControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(1018, 539);
+            this.homeControl1.Size = new System.Drawing.Size(764, 438);
             this.homeControl1.TabIndex = 1;
             // 
             // customerControl1
             // 
             this.customerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customerControl1.Location = new System.Drawing.Point(0, 0);
-            this.customerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customerControl1.Name = "customerControl1";
-            this.customerControl1.Size = new System.Drawing.Size(1018, 539);
+            this.customerControl1.Size = new System.Drawing.Size(764, 438);
             this.customerControl1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(282, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "version 1.0";
             // 
             // staffControl1
             // 
             this.staffControl1.BackColor = System.Drawing.Color.White;
             this.staffControl1.Location = new System.Drawing.Point(0, 0);
-            this.staffControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.staffControl1.Margin = new System.Windows.Forms.Padding(4);
             this.staffControl1.Name = "staffControl1";
             this.staffControl1.Size = new System.Drawing.Size(1019, 539);
             this.staffControl1.TabIndex = 0;
@@ -431,17 +408,17 @@ namespace StoreManagement
             // 
             this.ordersControl1.BackColor = System.Drawing.Color.White;
             this.ordersControl1.Location = new System.Drawing.Point(0, 0);
-            this.ordersControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ordersControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ordersControl1.Name = "ordersControl1";
             this.ordersControl1.Size = new System.Drawing.Size(1019, 539);
             this.ordersControl1.TabIndex = 0;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 650);
-            this.Controls.Add(this.btnGH);
+            this.ClientSize = new System.Drawing.Size(913, 528);
+            this.Controls.Add(button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label2);
@@ -451,7 +428,6 @@ namespace StoreManagement
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
@@ -495,6 +471,5 @@ namespace StoreManagement
         private OrdersControl ordersControl2;
         private HomeControl homeControl1;
         private customerControl customerControl1;
-        private System.Windows.Forms.Button btnGH;
     }
 }

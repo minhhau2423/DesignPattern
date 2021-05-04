@@ -29,14 +29,12 @@ namespace StoreManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button3;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersControl));
             System.Windows.Forms.Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersControl));
             System.Windows.Forms.Button button7;
             System.Windows.Forms.Button button2;
             System.Windows.Forms.Button button4;
             this.label1 = new System.Windows.Forms.Label();
-            this.txtMaSP = new ns1.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenSP = new ns1.BunifuMetroTextbox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,10 +44,16 @@ namespace StoreManagement
             this.label5 = new System.Windows.Forms.Label();
             this.txtKM = new ns1.BunifuMetroTextbox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtThanhTien = new ns1.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMaSP = new System.Windows.Forms.ComboBox();
             this.txtSdtKH = new ns1.BunifuMetroTextbox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtDiaChiKH = new ns1.BunifuMetroTextbox();
@@ -62,30 +66,16 @@ namespace StoreManagement
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtTong = new ns1.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtThanhTien = new ns1.BunifuMetroTextbox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            button3 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             button7 = new System.Windows.Forms.Button();
             button2 = new System.Windows.Forms.Button();
             button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            button3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button3.ForeColor = System.Drawing.Color.White;
-            button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            button3.Location = new System.Drawing.Point(82, 405);
-            button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(29, 26);
-            button3.TabIndex = 40;
-            button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -147,6 +137,7 @@ namespace StoreManagement
             button4.Size = new System.Drawing.Size(22, 22);
             button4.TabIndex = 50;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -158,22 +149,6 @@ namespace StoreManagement
             this.label1.Size = new System.Drawing.Size(62, 14);
             this.label1.TabIndex = 20;
             this.label1.Text = "Product ID";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtMaSP.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtMaSP.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtMaSP.BorderThickness = 2;
-            this.txtMaSP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaSP.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSP.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.txtMaSP.isPassword = false;
-            this.txtMaSP.Location = new System.Drawing.Point(76, 14);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(115, 22);
-            this.txtMaSP.TabIndex = 21;
-            this.txtMaSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -282,6 +257,7 @@ namespace StoreManagement
             this.txtKM.Size = new System.Drawing.Size(58, 22);
             this.txtKM.TabIndex = 29;
             this.txtKM.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtKM.Leave += new System.EventHandler(this.txtKM_Leave);
             // 
             // label6
             // 
@@ -294,22 +270,6 @@ namespace StoreManagement
             this.label6.TabIndex = 30;
             this.label6.Text = "Into money";
             // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtThanhTien.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtThanhTien.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtThanhTien.BorderThickness = 2;
-            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThanhTien.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.txtThanhTien.isPassword = false;
-            this.txtThanhTien.Location = new System.Drawing.Point(76, 154);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(115, 22);
-            this.txtThanhTien.TabIndex = 31;
-            this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -321,19 +281,66 @@ namespace StoreManagement
             this.label7.TabIndex = 32;
             this.label7.Text = "%";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 249);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(382, 142);
-            this.dataGridView1.TabIndex = 34;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Column1,
+            this.Amount,
+            this.Price,
+            this.Discount,
+            this.IntoMoney});
+            this.dataGridView.Location = new System.Drawing.Point(3, 249);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(382, 142);
+            this.dataGridView.TabIndex = 34;
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 50;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Product name";
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 80;
+            // 
+            // Amount
+            // 
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.Width = 50;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.Width = 60;
+            // 
+            // Discount
+            // 
+            this.Discount.HeaderText = "Discount";
+            this.Discount.Name = "Discount";
+            this.Discount.Width = 50;
+            // 
+            // IntoMoney
+            // 
+            this.IntoMoney.HeaderText = "Into money";
+            this.IntoMoney.Name = "IntoMoney";
+            this.IntoMoney.Width = 60;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtMaSP);
             this.panel2.Controls.Add(button4);
             this.panel2.Controls.Add(button2);
             this.panel2.Controls.Add(this.txtSdtKH);
@@ -345,13 +352,12 @@ namespace StoreManagement
             this.panel2.Controls.Add(this.txtMaKH);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(button3);
             this.panel2.Controls.Add(button1);
             this.panel2.Controls.Add(button7);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.txtTong);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dataGridView);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtThanhTien);
             this.panel2.Controls.Add(this.label6);
@@ -363,13 +369,22 @@ namespace StoreManagement
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtTenSP);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtMaSP);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(376, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(388, 438);
             this.panel2.TabIndex = 1;
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtMaSP.FormattingEnabled = true;
+            this.txtMaSP.Location = new System.Drawing.Point(76, 19);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(111, 21);
+            this.txtMaSP.TabIndex = 51;
+            this.txtMaSP.SelectedIndexChanged += new System.EventHandler(this.txtMaSP_SelectedIndexChanged);
             // 
             // txtSdtKH
             // 
@@ -511,6 +526,7 @@ namespace StoreManagement
             this.txtTong.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txtTong.BorderThickness = 2;
             this.txtTong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTong.Enabled = false;
             this.txtTong.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTong.ForeColor = System.Drawing.Color.DodgerBlue;
             this.txtTong.isPassword = false;
@@ -531,6 +547,23 @@ namespace StoreManagement
             this.label8.TabIndex = 35;
             this.label8.Text = "Total";
             // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtThanhTien.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtThanhTien.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtThanhTien.BorderThickness = 2;
+            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThanhTien.Enabled = false;
+            this.txtThanhTien.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtThanhTien.isPassword = false;
+            this.txtThanhTien.Location = new System.Drawing.Point(76, 154);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(115, 22);
+            this.txtThanhTien.TabIndex = 31;
+            this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
@@ -545,9 +578,9 @@ namespace StoreManagement
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(353, 438);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(350, 438);
             this.flowLayoutPanel1.TabIndex = 39;
             // 
             // OrdersControl
@@ -561,7 +594,7 @@ namespace StoreManagement
             this.Name = "OrdersControl";
             this.Size = new System.Drawing.Size(764, 438);
             this.Load += new System.EventHandler(this.OrdersControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -570,7 +603,6 @@ namespace StoreManagement
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private ns1.BunifuMetroTextbox txtMaSP;
         private System.Windows.Forms.Label label2;
         private ns1.BunifuMetroTextbox txtTenSP;
         private System.Windows.Forms.Label label3;
@@ -580,9 +612,8 @@ namespace StoreManagement
         private System.Windows.Forms.Label label5;
         private ns1.BunifuMetroTextbox txtKM;
         private System.Windows.Forms.Label label6;
-        private ns1.BunifuMetroTextbox txtThanhTien;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Panel panel2;
         private ns1.BunifuMetroTextbox txtTong;
         private System.Windows.Forms.Label label8;
@@ -598,5 +629,13 @@ namespace StoreManagement
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private ns1.BunifuMetroTextbox txtThanhTien;
+        private System.Windows.Forms.ComboBox txtMaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IntoMoney;
     }
 }
